@@ -12,6 +12,7 @@ var handle = {};
 handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
 handle["/upload"] = requestHandlers.upload;  
+handle["/show"] = requestHandlers.show;
 
 // loose coupling
 server.start(router.route,handle);

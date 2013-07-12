@@ -12,7 +12,7 @@ function start(route, handle){
 		var pathname = url.parse(request.url).pathname;
 		console.log("Request for "+pathname+" received.");
 		
-		request.setEncoding("utf8");
+		/*request.setEncoding("utf8");
 
 		request.addListener("data",function(postDataChunk) {
 			postData += postDataChunk;
@@ -22,7 +22,9 @@ function start(route, handle){
 
 		request.addListener("end",function(){
 			route(handle,pathname,response,postData);
-		});
+		});*/
+
+		route(handle,pathname,response,request);
 		
 		//route(handle,pathname,response);
 	}
